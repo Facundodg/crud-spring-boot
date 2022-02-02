@@ -1,8 +1,8 @@
 package proyecto2.example.proyecto2.controllers;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import proyecto2.example.proyecto2.dao.UsuarioDao;
 import proyecto2.example.proyecto2.models.Usuario;
 
 import java.util.ArrayList;
@@ -11,7 +11,14 @@ import java.util.List;
 @RestController // esta anotacion le indicamos que esta clase va a ser un controlador
 public class UsuarioController {
 
-    @RequestMapping(value = "usuario/{id}") // esta anotacion indica la url para ingresar a esta funcion
+
+    @Autowired //lo que hace es que UsuarioDaoImp cree un objeto y lo guarde en esta variable
+
+    //----------------INGRESAR USUARIO----------------------
+
+    private UsuarioDao usuarioDao; //INYECCION DE DEPENDENCIAS
+    //si usamos autowired en otras partes del proyecto ese objeto se comparte en memoria y puede generar un conflicto
+    @RequestMapping(value = "api/usuario/{id}", method = RequestMethod.GET) // esta anotacion indica la url para ingresar a esta funcion
     public Usuario getUsuario(@PathVariable Long id){
 
         //estoy traeria un jason con todos los datos de nuestro usuario
@@ -27,44 +34,36 @@ public class UsuarioController {
         return usuario;
     }
 
-    @RequestMapping(value = "usuarios") // esta anotacion indica la url para ingresar a esta funcion
+    //----------------INGRESAR USUARIOS----------------------
+
+
+    @RequestMapping(value = "api/usuarios", method = RequestMethod.GET) // esta anotacion indica la url para ingresar a esta funcion
     public List<Usuario> getUsuarios(){
 
         //estoy traeria un jason con todos los datos de nuestro usuario
+        return usuarioDao.getUsuarios();
 
-        List<Usuario> usu = new ArrayList<>();
-
-        Usuario usuario = new Usuario();
-
-        usuario.setId(12L);
-        usuario.setNombre("Facundo");
-        usuario.setApellido("Diaz");
-        usuario.setEmail("facundo_dg10@hotmail.com");
-        usuario.setTelefono("3232132");
-
-        Usuario usuario2 = new Usuario();
-
-        usuario2.setId(13L);
-        usuario2.setNombre("Mariela");
-        usuario2.setApellido("Bertinati");
-        usuario2.setEmail("Mar_123@hotmail.com");
-        usuario2.setTelefono("312321");
-
-        Usuario usuario3 = new Usuario();
-
-        usuario3.setId(14L);
-        usuario3.setNombre("Diego");
-        usuario3.setApellido("Ruiz");
-        usuario3.setEmail("D_Ruiz10@hotmail.com");
-        usuario3.setTelefono("4352332");
-
-        usu.add(usuario);
-        usu.add(usuario2);
-        usu.add(usuario3);
-
-        return usu;
     }
 
+    //----------------ELIMINAR USUARIOS----------------------
+
+    @RequestMapping(value = "api/usuario/{id}", method = RequestMethod.DELETE)
+    public void eliminar(@PathVariable Long id){
+
+    usuarioDao.eliminar(id);
+
+    }
+
+    //----------------AGREGAR USUARIOS----------------------
+
+    @RequestMapping(value = "api/usuarios", method = RequestMethod.POST) // esta anotacion indica la url para ingresar a esta funcion
+    public void registrarUsuario(@RequestBody Usuario usuario){
+
+        //@RequestBody = convierte el json a un usuario
+        //estoy traeria un jason con todos los datos de nuestro usuario
+         usuarioDao.registrar(usuario);
+
+    }
 
 
 }
