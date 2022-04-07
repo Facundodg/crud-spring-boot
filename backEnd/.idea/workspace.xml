@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8ae045d5-16b9-4fe7-b10a-6dc1c8f9e33f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/proyecto2/src/main/java/proyecto2/example/proyecto2/controllers/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto2/src/main/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/java/proyecto2/example/proyecto2/dao/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto2/src/main/java/proyecto2/example/proyecto2/dao/UsuarioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/java/proyecto2/example/proyecto2/dao/UsuarioDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto2/src/main/java/proyecto2/example/proyecto2/dao/UsuarioDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/java/proyecto2/example/proyecto2/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto2/src/main/java/proyecto2/example/proyecto2/models/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/resources/static/ingreso.html" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto2/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/resources/static/js/registrar.js" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto2/src/main/resources/static/js/registrar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/resources/static/js/sss.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/resources/static/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto2/src/main/resources/static/js/usuario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto2/src/main/resources/static/registrar.html" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto2/src/main/resources/static/registrar.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="25TpzfyAASDtVQI474zo6i4ZSZt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/proyecto2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ae045d5-16b9-4fe7-b10a-6dc1c8f9e33f" name="Changes" comment="" />
+      <created>1645561195074</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645561195074</updated>
+    </task>
+    <servers />
+  </component>
+</project>

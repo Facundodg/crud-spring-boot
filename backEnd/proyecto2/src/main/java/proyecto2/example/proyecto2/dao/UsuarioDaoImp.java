@@ -38,4 +38,18 @@ public class UsuarioDaoImp implements UsuarioDao{
         emtityManager.merge(usuario);
 
     }
+
+    //CONSULATA PARA VER SI EL MAIL Y PASSWORD SON CORRECTOS Y TAMBIEN EVITANDO UNA INYECCION DE CODIGO HTML
+
+    public boolean verificarCredenciales(Usuario usuario){
+
+        String query = "FROM Usuario WHERE email = :email AND password = :password"; //VA EL NOMBRE DE LA CLASE NO DE LA TABLA
+        List<Usuario> lista = emtityManager.createQuery(query).setParameter("email", usuario.getEmail())
+                .setParameter("password",usuario.getPassword())
+                .getResultList(); // si encuentra un usuario que cumpla con el email y contraseña la query
+        //traera una fila lo que significa que se llenara con el usuario.
+
+        return !lista.isEmpty(); //si la lista NO esta basia es por que el usuario y contraseña son correctos
+
+    }
 }

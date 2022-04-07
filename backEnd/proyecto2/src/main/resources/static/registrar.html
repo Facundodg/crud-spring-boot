@@ -5,7 +5,13 @@
 
 	<link rel="stylesheet" type="text/css" href="css/estilos-formulario.css">
 
-	<title>Formulario</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script src="./js/registrar.js" > </script>
+
+	<link rel="shortcut icon" href="#">
+
+	<title>REGISTRO</title>
 </head>
 <body>
 
@@ -18,13 +24,15 @@
 		<input class="controls" type="text" name="mail" id="textmail" placeholder="Mail">
 		<input class="controls" type="text" name="telefono" id="textelefono" placeholder="Telefono">
 		<input class="controls" type="password" name="password" id="textpassword" placeholder="Password">
-		<input class="controls" type="password" name="password" id="textpassword" placeholder="Validar Password">
+		<input class="controls" type="password" name="password" id="textpasswords" placeholder="Validar Password">
 
 		<p>Estoy de acuerdo  con <a href="#">Terminos y Condiciones</a></p>
-		<input class="botons" type="submit" value="Registrar">
-		<p><a href="#"><a>¿Ya tengo Cuenta?<p>
+		<button  onclick="RegistrarUsuarios()" class="botons" type="submit" value="">Registrar</button>
+		<p><a href="#">¿Ya tengo Cuenta?</a></p>
 
 	</section>
+
+
 
 </body>
 </html>
